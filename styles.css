@@ -1,0 +1,915 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILOS DEL NAVBAR */
+#navbar {
+    background-color: rgb(189, 52, 52);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    justify-content: space-between;
+}
+
+#navbar-logo img {
+    width: 200px;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+#navbar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+/* BOTON INICIO */
+
+#home-btn {
+    height: 40px;
+    width: 90px;
+    background-color: rgb(18, 18, 218);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0.3rem;
+    margin-right: 20px;
+    box-shadow: 1px 1px 5px rgb(94, 21, 21);
+    transition: 200ms;
+}
+
+#home-btn a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#home-btn:hover {
+    background-color: rgb(30, 30, 126);
+    transition: 200ms;
+}
+
+#home-btn:active {
+    box-shadow: inset 1px 1px 1px black;
+}
+
+#home-btn a:hover {
+    color: white;
+
+}
+
+/* ESTILOS DEL BUSCADOR */
+
+#navbar-items form {
+    padding-right: 20px;
+}
+
+#searchbox {
+    width: 300px;
+    margin-right: 2px;
+    padding: 10px;
+    border: 2px solid #4052D9;
+    border-radius: 1rem;
+
+}
+
+#searchbox:focus {
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+    border-radius: 1rem;
+
+}
+
+
+
+#search-btn {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px rgb(160, 45, 45);
+    margin-left: 10px;
+    height: 39px;
+    width: 40px;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: rgba(235, 235, 23, 0.767);
+}
+
+#search-btn:active {
+
+    box-shadow: inset 1px 1px 3px black;
+    transition: 300ms;
+}
+
+/* FIN DE ESTILOS DE LA NAVBAR */
+
+
+/* ANIMACIONES DEL MENU DE FILTROS HACIA ABAJO  */
+
+
+.fade-in-top {
+    -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@-webkit-keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+
+    }
+
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+
+    }
+
+    75% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    99% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+
+    }
+
+    60% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    75% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    99% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ANIMACIONES DEL MENU DE FILTROS HACIA ARRIBA */
+.fade-in-top {
+    animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-out-top {
+    animation: fade-out-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+
+/* FIN DE ANIMACIONES DEL MENU DE FILTRO */
+
+/* ESTILOS DE SECCION Y BOTON DE FILTRAR */
+
+#filter-div {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    z-index: 1;
+
+}
+
+#btn-div {
+    background-color: rgb(242, 242, 235);
+    box-shadow: 1px 0px 5px rgb(209, 208, 208);
+    width: 100%;
+    height: 255px;
+
+}
+
+#toggleFiltersButton {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 170px;
+    width: 100px;
+    padding: 5px;
+    border-radius: 0.6rem;
+    border: none;
+    background-color: rgb(189, 52, 52);
+    box-shadow: 1px 1px 3px rgb(99, 98, 98);
+    color: white;
+}
+
+#toggleFiltersButton:active {
+    box-shadow: inset 1px 1px 1px black;
+
+}
+
+
+
+
+#checkboxContainer {
+    background-color: rgb(250, 249, 246);
+    box-shadow: 0px 3px 20px 1px rgba(0, 0, 0, 0.45);
+    z-index: -1;
+    height: 200px;
+}
+
+.hidden {
+    display: none;
+
+
+}
+
+#filter-apply {
+    flex-basis: 100%;
+    box-shadow: none;
+}
+
+#checkboxWrapper {
+    background-color: rgb(250, 249, 246);
+    z-index: 1;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#checkboxWrapper .filter-options {
+    margin: 10px;
+    color: black;
+    box-shadow: 0px 0px 4px rgb(134, 133, 133);
+}
+
+#checkboxWrapper .filter-options:hover {
+    opacity: .8;
+}
+
+#checkboxWrapper .filter-options:active {
+    opacity: .9;
+    box-shadow: inset 0px 0px 1px gray;
+
+}
+
+
+#checkboxContainer label {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+
+
+#filter-btn {
+    display: block;
+    margin: 20px auto;
+    height: 40px;
+    width: 90px;
+    background-color: rgb(18, 18, 218);
+    color: white;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgb(99, 98, 98);
+    transition: 200ms;
+}
+
+#filter-btn:hover {
+    background-color: rgb(25, 25, 173);
+
+}
+
+#filter-btn:active {
+    box-shadow: inset 1px 1px 1px black;
+}
+
+
+#btn-exit-div {
+    width: 100%;
+    text-align: center;
+
+}
+
+/* SECCION DE POKEMONES  */
+
+#pokemon-list-container {
+    max-width: 1400px;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* TARJETAS DE POKEMON */
+
+.pokemon-info {
+    display: flex;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin: 40px auto;
+    width: 350px;
+    height: 350px;
+}
+
+.pokemon-page {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.pokemon-sprite {
+    width: 10vh;
+    height: 9vh;
+    padding: 15px;
+    display: block;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pokemon-name {
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.pokemon-number {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.pokemon-info:hover {
+
+    width: 370px;
+    height: 370px;
+    transition: 350ms;
+}
+
+.pokemon-info:active {
+
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: 300ms;
+}
+
+.pokemon-type-list {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.pokemon-type {
+    color: white;
+    padding: 0.4rem;
+    margin: 0px 10px;
+    list-style: none;
+
+}
+
+
+#footer{
+    margin-top: 200px;
+    background-color:rgb(189, 52, 52) ;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+
+}
+
+#footer-logo img{
+    height:100px ;
+}
+
+#footer-name{
+   font-size: 1rem;
+    color: white;
+}
+
+
+/* ESTILOS SEGUN TIPO ELEMENTAL */
+
+.grass {
+    background-color: rgb(81, 214, 20);
+    border-radius: 0.5rem;
+}
+
+.poison {
+    background-color: rgb(175, 20, 214);
+    border-radius: 0.5rem;
+}
+
+.dragon {
+    background-color: rgb(252, 208, 12);
+    border-radius: 0.5rem;
+}
+
+.fire {
+    background-color: rgb(252, 140, 12);
+    border-radius: 0.5rem;
+}
+
+.water {
+    background-color: rgb(12, 136, 252);
+    border-radius: 0.5rem;
+}
+
+.electric {
+    background-color: rgb(215, 230, 7);
+    border-radius: 0.5rem;
+}
+
+.ice {
+    background-color: rgb(12, 236, 252);
+    border-radius: 0.5rem;
+}
+
+.fighting {
+    background-color: rgb(252, 12, 12);
+    border-radius: 0.5rem;
+}
+
+.fighting label {
+    color: white;
+}
+
+.ground {
+    background-color: rgb(148, 110, 29);
+    border-radius: 0.5rem;
+}
+
+.flying {
+    background-color: rgb(202, 132, 235);
+    border-radius: 0.5rem;
+}
+
+.rock {
+    background-color: rgb(90, 73, 38);
+    border-radius: 0.5rem;
+}
+
+.rock label {
+    color: white;
+}
+
+.bug {
+    background-color: rgb(113, 163, 90);
+    border-radius: 0.5rem;
+}
+
+.ghost {
+    background-color: rgb(85, 48, 90);
+    border-radius: 0.5rem;
+}
+
+.ghost label {
+    color: white;
+}
+
+.psychic {
+    background-color: rgb(233, 80, 212);
+    border-radius: 0.5rem;
+}
+
+.normal {
+    background-color: rgb(78, 78, 78);
+    border-radius: 0.5rem;
+}
+
+.normal label {
+    color: white;
+}
+
+.fairy {
+    background-color: rgb(255, 0, 221);
+    border-radius: 0.5rem;
+}
+
+.steel {
+    background-color: rgb(153, 152, 153);
+    border-radius: 0.5rem;
+}
+
+/* MEDIA QUERIES DE LA PAGINA PRINCIPAL */
+
+@media only screen and (max-width: 1200px) {
+
+    .pokemon-sprite {
+        width: 10vh;
+        padding: 10px;
+
+    }
+
+    .pokemon-type {
+        font-size: 0.7rem;
+
+    }
+
+    .pokemon-info {
+
+
+        width: 290px;
+        height: 290px;
+    }
+
+    .pokemon-info:hover {
+
+
+        width: 300px;
+        height: 300px;
+    }
+
+    #search-btn {
+        background-color: yellow;
+        box-shadow: 0px 0px 10px rgb(160, 45, 45);
+        margin-left: 0px;
+        height: 39px;
+        width: 40px;
+        border-radius: 0.3rem;
+        border: none;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+    .pokemon-info {
+        width: 250px;
+        height: 250px;
+    }
+
+    .pokemon-number {
+
+        margin-top: 5px;
+    }
+
+
+    #pokemon-list-container {
+        max-width: 1400px;
+        margin: 100px auto;
+
+    }
+
+    .pokemon-info:hover {
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    #navbar-logo img {
+        width: 200px;
+        padding: 10px;
+        margin-left: 0px;
+    }
+
+    #pokemon-list-container {
+        max-width: 1400px;
+        margin: 100px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #navbar {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+
+    }
+
+    #navbar-items {
+
+        flex-direction: column;
+        padding: 10px;
+
+    }
+
+    #searchbox {
+        width: 300px;
+        margin-right: 0px;
+
+    }
+
+    #home-btn {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 0px;
+    }
+
+    #navbar-items form {
+        padding-right: 0px;
+    }
+
+    #toggleFiltersButton {
+
+        margin-top: 71px;
+        width: 138px;
+        padding: 15px;
+
+    }
+
+    #pokemon-list-container {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pokemon-info {
+        width: 290px;
+        height: 290px;
+    }
+
+    .pokemon-info:hover {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+
+    #pokemon-list-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    #checkboxWrapper {
+        padding-bottom: 0px;
+        padding-top: 8px;
+
+    }
+
+    #pokemon-list-container {
+        max-width: 1400px;
+        margin: 80px auto;
+        display: grid;
+
+    }
+
+    #footer{
+        background-color:rgb(189, 52, 52) ;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+
+}
+
+@media only screen and (max-width: 435px) {
+
+    #navbar-items form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #navbar-items {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    #searchbox {
+        width: 270px;
+        margin-right: 0px;
+
+    }
+
+    #search-btn {
+        margin-top: 20px;
+        width: 90%;
+
+    }
+
+    #pokemon-list-container {
+
+        margin: 110px auto;
+
+    }
+}
+
+
+/* ESTILOS DE LA PAGINA INDIVIDUAL DEL POKEMON */
+
+#navbar-pokemon-page {
+    display: flex;
+    background-color: rgb(189, 52, 52);
+    width: 100%;
+    justify-content: space-between;
+}
+
+#navbar-items-pokemon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 170px;
+}
+
+.pokemon-full-card-container {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokemon-full-info {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    height: 600px;
+    width: 600px;
+}
+
+.pokemon-type-class {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.pokemon-sprite-full {
+    height: 20vh;
+    display: block;
+    margin: 30px auto;
+
+}
+
+
+.stats {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+.stat {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home-btn-full {
+    height: 40px;
+    width: 90px;
+    background-color: rgb(18, 18, 218);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0.3rem;
+
+    box-shadow: 1px 1px 5px rgb(94, 21, 21);
+    transition: 200ms;
+}
+
+#home-btn-full a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#home-btn-full:hover {
+    background-color: rgb(30, 30, 126);
+    transition: 200ms;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #navbar-logo img {
+        width: 200px;
+        padding: 10px;
+        margin-left: 0px;
+    }
+
+    
+    #navbar-pokemon-page {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+
+    }
+
+    #navbar-items-pokemon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0px;
+        margin-top: 20px;
+      }
+
+
+   
+}
+
+@media only screen and (max-width: 700px) {
+
+
+    #pokemon-full-info {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        height: 550px;
+        width: 400px;
+    }
+
+    .stats {
+        font-size: 0.8rem;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    #pokemon-full-info {
+
+        height: 580px;
+        width: 300px;
+    }
+
+    .stats {
+        font-size: 0.8rem;
+
+    }
+}

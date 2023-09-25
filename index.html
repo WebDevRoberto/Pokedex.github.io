@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POKEDEX</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="./IMG/favicon.gif" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/adea8fe2e6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="navbar-logo"><a href="index.html" target="_blank"><img
+          src="IMG/POKEDEXLOGO.png" alt="POKEDEX"></a></div>
+    <div id="navbar-items">
+      <button id="home-btn"><a href="index.html">INICIO</a></button>
+      <form action="">
+        <input id="searchbox" type="search" placeholder="BUSCAR UN POKEMON"><span></span>
+        <button type="submit" id="search-btn"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <div id="filter-div">
+    <div id="btn-div">
+      <button id="toggleFiltersButton" onclick="toggleFilters()">FILTROS <span><br><i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></span></button>
+    </div>
+  </div>
+  <div id="checkboxContainer" class="hidden fade-in-top ">
+    <div id="checkboxWrapper">
+      <div class="normal filter-options">
+        <input type="checkbox" id="normal" name="normal" value="normal">
+        <label for="normal">Normal</label>
+      </div>
+      <div class="fire filter-options">
+        <input type="checkbox" id="fire" name="fire" value="fire">
+        <label for="fire">Fire</label>
+      </div>
+      <div class="water filter-options">
+        <input type="checkbox" id="water" name="water" value="water">
+        <label for="water">Water</label>
+      </div>
+      <div class="electric filter-options">
+        <input type="checkbox" id="electric" name="electric" value="electric">
+        <label for="electric">Electric</label>
+      </div>
+      <div class="grass filter-options">
+        <input type="checkbox" id="grass" name="grass" value="grass">
+        <label for="grass">Grass</label>
+      </div>
+      <div class="ice filter-options">
+        <input type="checkbox" id="ice" name="ice" value="ice">
+        <label for="ice">Ice</label>
+      </div>
+      <div class="fighting filter-options">
+        <input type="checkbox" id="fighting" name="fighting" value="fighting">
+        <label for="fighting">Fighting</label>
+      </div >
+      <div class="poison filter-options">
+        <input type="checkbox" id="poison" name="poison" value="poison">
+        <label for="poison">Poison</label>
+      </div>
+      <div class="ground filter-options" >
+        <input type="checkbox" id="ground" name="ground" value="ground">
+        <label for="ground">Ground</label>
+      </div>
+      <div class="flying  filter-options">
+        <input type="checkbox" id="flying" name="flying" value="flying">
+        <label for="flying">Flying</label>
+      </div>
+      <div class="psychic filter-options">
+        <input type="checkbox" id="psychic" name="psychic" value="psychic">
+        <label for="psychic">Psychic</label>
+      </div>
+      <div class="bug filter-options">
+        <input type="checkbox" id="bug" name="bug" value="bug">
+        <label for="bug">Bug</label>
+      </div>
+      <div class="rock filter-options">
+        <input type="checkbox" id="rock" name="rock" value="rock">
+        <label for="rock">Rock</label>
+      </div>
+      <div class="ghost filter-options">
+        <input type="checkbox" id="ghost" name="ghost" value="ghost">
+        <label for="ghost">Ghost</label>
+      </div>
+      <div class="dragon filter-options">
+        <input type="checkbox" id="dragon" name="dragon" value="dragon">
+        <label for="dragon">Dragon</label>
+      </div>
+      <div id="filter-apply">
+        <button id="filter-btn">FILTRAR</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="pokemon-list-container">
+
+
+
+  </div>
+  <footer id="footer">
+    <div id="footer-logo"><a href="index.html" target="_blank"><img
+      src="IMG/POKEDEXLOGO.png" alt="POKEDEX"></a></div>
+    <div id="footer-name">
+      <h2>Roberto Sandoval</h2>
+    </div>
+  </footer>
+</body>
+<script src="scripts.js"></script>
+
+
+</html>
